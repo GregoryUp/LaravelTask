@@ -1,0 +1,676 @@
+{
+	"info": {
+		"_postman_id": "f99e3ddf-e1e5-4e92-bc1f-0076243f039d",
+		"name": "Laravel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23872650",
+		"_collection_link": "https://solar-meteor-923655.postman.co/workspace/My-Workspace~67d62712-0497-4dbf-89e8-93f2799425c9/collection/23872650-f99e3ddf-e1e5-4e92-bc1f-0076243f039d?action=share&source=collection_link&creator=23872650"
+	},
+	"item": [
+		{
+			"name": "Клиенты",
+			"item": [
+				{
+					"name": "Получение клиентов",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/clients",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"clients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Получение клиентов",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/clients",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"clients"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Создание клиента",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Jhon\",\n    \"sex\": \"male\",\n    \"phone\": \"+79999999999\",\n    \"address\": null,\n    \"cars\": [\n        {\n            \"brand\": \"BMW\",\n            \"model\": \"M8\",\n            \"color\": \"#000000\",\n            \"number\": \"о111ев777\",\n            \"is_parked\": false\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/clients",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"clients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Создание клиента",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Jhon\",\n    \"sex\": \"male\",\n    \"phone\": \"+79999999999\",\n    \"address\": null,\n    \"cars\": [\n        {\n            \"brand\": \"BMW\",\n            \"model\": \"M8\",\n            \"color\": \"#000000\",\n            \"number\": \"о111ев777\",\n            \"is_parked\": false\n        },\n        {\n            \"brand\": \"Audi\",\n            \"model\": \"RS7\",\n            \"color\": \"#0000FF\",\n            \"number\": \"о222ев777\",\n            \"is_parked\": true\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/clients",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"clients"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Создание клиента",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Iana\",\n    \"sex\": \"female\",\n    \"phone\": \"+79999999999\",\n    \"address\": null,\n    \"cars\": [\n        {\n            \"brand\": \"Mercedez\",\n            \"model\": \"CLS\",\n            \"color\": \"#FF0000\",\n            \"number\": \"о111ев777\",\n            \"is_parked\": false\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/clients",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"clients"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Редактирование клиента",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/clients/:client_id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"clients",
+								":client_id"
+							],
+							"variable": [
+								{
+									"key": "client_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Редактирование клиента",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Gregory\",\n    \"sex\": \"male\",\n    \"phone\": \"+79399999999\",\n    \"address\": \"Ул. Пушкина\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/clients/:client_id",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"clients",
+										":client_id"
+									],
+									"variable": [
+										{
+											"key": "client_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Удаление клиента",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/clients/:client_id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"clients",
+								":client_id"
+							],
+							"variable": [
+								{
+									"key": "client_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Удаление клиента",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/clients/:client_id",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"clients",
+										":client_id"
+									],
+									"variable": [
+										{
+											"key": "client_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Автомобили",
+			"item": [
+				{
+					"name": "Получение автомобилей",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cars",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cars"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Получение автомобилей",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/cars",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"cars"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Статус парковки",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/parking?is_parked=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"parking"
+							],
+							"query": [
+								{
+									"key": "is_parked",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Припаркованы",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/parking?is_parked=1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"parking"
+									],
+									"query": [
+										{
+											"key": "is_parked",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Не припаркованы",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/parking?is_parked=1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"parking"
+									],
+									"query": [
+										{
+											"key": "is_parked",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Добавление автомобиля",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"brand\": null,\n    \"model\": \"X5\",\n    \"color\": \"#111111\",\n    \"number\": \"ук112у777\",\n    \"is_parked\": true,\n    \"client_id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cars",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cars"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Добавление автомобиля",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"brand\": \"BMW\",\n    \"model\": \"X5\",\n    \"color\": \"#111111\",\n    \"number\": \"ук112у777\",\n    \"is_parked\": true,\n    \"client_id\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/cars",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"cars"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Редактирование автомобиля",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"brand\": \"Alfa Romeo\",\n    \"model\": \"Gulia\",\n    \"color\": \"#FF0000\",\n    \"number\": \"пр444к777\",\n    \"is_parked\": false,\n    \"client_id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cars/:car_id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cars",
+								":car_id"
+							],
+							"variable": [
+								{
+									"key": "car_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Редактирование автомобиля",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"brand\": \"Alfa Romeo\",\n    \"model\": \"Gulia\",\n    \"color\": \"#FF0000\",\n    \"number\": \"пр444к777\",\n    \"is_parked\": false,\n    \"client_id\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/cars/:car_id",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"cars",
+										":car_id"
+									],
+									"variable": [
+										{
+											"key": "car_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Удаление автомобиля",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cars/:car_id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cars",
+								":car_id"
+							],
+							"variable": [
+								{
+									"key": "car_id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Удаление автомобиля",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/cars/:car_id",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"cars",
+										":car_id"
+									],
+									"variable": [
+										{
+											"key": "car_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	]
+}
